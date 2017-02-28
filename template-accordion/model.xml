@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog>
+    <template>
+        <type>CONTAINER</type>
+        <name>templateAccordion</name>
+        <properties>
+            <property name="Web">
+                <value type="string">templates/template-accordion</value>
+            </property>
+            <property name="BundleName">
+                <value type="string">$(itemRoot)</value>
+            </property>
+            <property name="title">
+                <value type="string">template-accordion</value>
+            </property>
+            <property name="DefaultDevice">
+                <value type="string">Web</value>
+            </property>
+        </properties>
+    </template>
+</catalog>

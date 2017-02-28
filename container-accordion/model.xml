@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog>
+    <container>
+        <name>container-accordion</name>
+        <contextItemName>[BBHOST]</contextItemName>
+        <properties>
+            <property name="TemplateName">
+                <value type="string">templateAccordion</value>
+            </property>
+            <property name="viewNamespace">
+                <value type="string">templates_templateAccordion</value>
+            </property>
+            <property name="title" label="Title" viewHint="admin,designModeOnly">
+                <value type="string">container-accordion</value>
+            </property>
+            <property name="config">
+                <value type="string">$(itemRoot)/config.xml</value>
+            </property>
+            <property name="csr">
+                <value type="boolean">false</value>
+            </property>
+            <property name="thumbnailUrl">
+                <value type="string">$(itemRoot)/media/icon.png</value>
+            </property>
+            <property name="panelTitles" label="Panel Titles" viewHint="text-input,admin,designModeOnly">
+                <value type="string">Default Panel 1,Default Panel 2</value>
+            </property>
+            <property name="panelClass" label="Bootstrap Panel Class" viewHint="text-input,admin,designModeOnly">
+                <value type="string">panel-default</value>
+            </property>
+        </properties>
+    </container>
+</catalog>

@@ -1,0 +1,31 @@
+{namespace templates_templateAccordion}
+/**
+* Container Template
+* @param item Item in context
+*/
+{template .templateAccordion}
+<div class="bp-container d-template-accordion container" data-pid="{$item.name}">
+
+    <div class="panel-group" id="accordion">
+        {let $panels: split($item.preferences.panelTitles.value, ',') /}
+        {for $i in range(0,length($panels))}
+        <div class="panel {$item.preferences.panelClass.value}">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse{$i}">{$panels[$i]}</a>
+                </h4>
+            </div>
+            <div id="collapse{$i}" class="panel-collapse collapse">
+                <div class="panel-body bp-area d-template-accordion--area">
+                    {foreach $child in $item.children}
+                        {if parseInt($child.preferences.area.value) == $i}
+                            {include($child) |noAutoescape}
+                        {/if}
+                    {/foreach}
+                </div>
+            </div>
+        </div>
+        {/for}
+    </div>
+</div>
+{/template}
